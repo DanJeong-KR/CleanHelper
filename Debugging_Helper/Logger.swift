@@ -1,14 +1,4 @@
-//
-//  Logger.swift
-//  CustomLogExample
-//
-//  Created by giftbot on 28/05/2019.
-//  Copyright © 2019 giftbot. All rights reserved.
-//
-
 import Foundation
-
-
 
 public func logger(
     _ contents: Any..., // ... 뒤에 몇개가 들어와도 상관없다는 키워드
