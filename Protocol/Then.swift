@@ -5,6 +5,11 @@
 //  Created by giftbot on 14/06/2019.
 //  Copyright © 2019 giftbot. All rights reserved.
 //
+//
+//let titleLabel = UILabel().then {
+//    $0.textColor = .black
+//    $0.textAlignment = .center
+//}
 
 import Foundation
 
