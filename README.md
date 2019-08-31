@@ -6,7 +6,7 @@
 * ### `Debugging`
 * ### `Animations`
 
-# 스크린샷
+# ScreenShot
 <a href="/assets/demo.gif" target="_blank"><img src="/assets/demo.gif" alt="My Image" width="750"></a>
 
 ---
