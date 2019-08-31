@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITableViewCell: Identifiable { }
-extension UICollectionViewCell: Identifiable { }
+extension UICollectionReusableView: Identifiable { }
 
 
 // register : 타입만 받아서 cell 간편하게 등록해줌

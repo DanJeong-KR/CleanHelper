@@ -52,6 +52,50 @@ extension UIView {
         centerXAnchor.constraint(equalTo: anchor, constant: c).isActive = true
         return self
     }
+  @discardableResult
+  func height(equalTo anchor: NSLayoutDimension? = nil, constant c: CGFloat = 0, multiplier m: CGFloat = 1) -> Self {
+    if let superview = superview {
+      if c == 0 {
+        let anchor = anchor ?? superview.safeAreaLayoutGuide.heightAnchor
+        heightAnchor.constraint(equalTo: anchor, multiplier: m, constant: c).isActive = true
+      } else {
+        // FIXME: - contant 에 값을 주면 전체 높이에서 계산되는 문제
+        heightAnchor.constraint(equalToConstant: c).isActive = true
+      }
+      return self
+    } else {
+      logger("\(ErrorLog.layout) : superview is nil")
+      fatalError()
+    }
+  }
+  
+  @discardableResult
+  func width(equalTo anchor: NSLayoutDimension? = nil, constant c: CGFloat = 0, multiplier m: CGFloat = 1) -> Self {
+    if let superview = superview {
+      if c == 0 {
+        let anchor = anchor ?? superview.safeAreaLayoutGuide.heightAnchor
+        heightAnchor.constraint(equalTo: anchor, multiplier: m, constant: c).isActive = true
+      } else {
+        heightAnchor.constraint(equalToConstant: c).isActive = true
+      }
+      return self
+    } else {
+      logger("\(ErrorLog.layout) : superview is nil")
+      fatalError()
+    }
+  }
+  
+  func equalToSuperView() {
+    if let superview = superview {
+      leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
+      rightAnchor.constraint(equalTo: superview.rightAnchor).isActive = true
+      topAnchor.constraint(equalTo: superview.topAnchor).isActive = true
+      bottomAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
+    } else {
+      logger("\(ErrorLog.layout) : superview is nil")
+      fatalError()
+    }
+  }
 }
 
 // MARK: - frame 기반에서 UI 설정하기 쉽게 하기
