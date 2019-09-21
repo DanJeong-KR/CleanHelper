@@ -1,6 +1,7 @@
 # Helper Project
-### 개발을 더 쉽게해주는 Helper 코드를 정리하는 프로젝트
+### 개발을 더 쉽게해주는 Helper 코드를 마인드맵을 활용해 직관적으로 정리하는 프로젝트
 
+### 카테고리
 * ### `Extensions`
 * ### `Protocols`
 * ### `Debugging`
